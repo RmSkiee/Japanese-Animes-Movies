@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,13 +15,13 @@ body {
     transition: background 0.8s ease;
 }
 
-/* --- NAVIGATION --- */
+/* --- UPDATED NAVIGATION --- */
 .top-nav {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    padding: 20px 60px;
+    padding: 10px 60px; /* Reduced vertical padding for the logo */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Change to space-between for left-logo, right-links */
     align-items: center;
     border-bottom: 1px solid rgba(255, 0, 0, 0.3);
     position: sticky;
@@ -29,10 +29,25 @@ body {
     z-index: 1000;
 }
 
+/* NEW Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* remove underlines if the logo is a link */
+}
+
+.logo-image {
+    height: 45px; /* Adjust height to fit the nav bar nicely */
+    width: auto;
+    /* Add a subtle shadow to integrate it with the site theme */
+    filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.3));
+    border-radius: 4px; /* Optional, softens the logo edges */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 40px; /* Increased gap for a cleaner look */
 }
 
 .nav-links a {
@@ -134,7 +149,7 @@ body {
 .card.is-center img { filter: brightness(1); }
 .card.is-center .card-label { background: #b30000; color: white; }
 
-/* --- MODAL / POP-UP / TRAILER PLAYER --- */
+/* --- MODAL POP-UP STYLES (No changes needed here) --- */
 .modal-overlay {
     position: fixed;
     inset: 0;
