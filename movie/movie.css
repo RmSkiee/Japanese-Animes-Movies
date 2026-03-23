@@ -19,14 +19,58 @@ body {
 .top-nav {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    padding: 10px 60px; /* Reduced vertical padding for the logo */
+    padding: 10px 60px;
     display: flex;
-    justify-content: space-between; /* Change to space-between for left-logo, right-links */
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+/* New Logo & Subtitle Styles */
+.my-logo {
+    display: flex;
+    flex-direction: row; /* This puts them side-by-side! */
+    align-items: center;
+    gap: 15px; /* Adds a nice space between the picture and the words */
+}
+
+.logo-img {
+    height: 50px; /* Made it slightly bigger to match the text */
+    width: auto;
+    filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.5));
+    border-radius: 4px; 
+}
+
+.logo-sub {
+    color: #ff4d4d;
+    font-size: 1.2rem; /* Increased size so it stands out next to the logo */
+    font-weight: 800; /* Made it a bit bolder */
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* New Links Box Styles */
+.links-box {
+    display: flex;
+    gap: 40px; 
+}
+
+.links-box a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.links-box a:hover {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
 }
 
 /* NEW Logo Styles */
