@@ -11,11 +11,16 @@ body{
 }
 
 .navbar{
-    background:#000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
     padding:18px 60px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    border-bottom:1px solid rgba(255,0,0,0.2);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo-area{
@@ -422,6 +427,9 @@ footer{
     .logo-text {
         text-align: center;
 
+    }
+    .navbar {
+        padding: 15px 20px;
     }
 }
 html {
