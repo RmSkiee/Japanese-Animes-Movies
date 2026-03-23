@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Movie & Series Hub - Homepage</title>
+
+  <style>
+
+    /* --- CSS STYLES --- */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+
+
+    body {
+
+      background-color: #0f1015;
+
+      color: #ffffff;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow-x: hidden;
+
+      background-repeat: no-repeat;
+
+      background-size: cover;
+
+      background-position: center;
+
+      transition: background-image 0.8s ease-in-out; 
+
+      position: relative;
+
+    }
+
+
+
+    body::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.6); 
+
+      z-index: -1; 
+
+    }
+
+
+
+    header, section, main {
+
+      position: relative;
+
+      z-index: 10;
+
+    }
+
+
+
+    .top-nav {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 20px 40px;
+
+      background: rgba(26, 27, 38, 0.4); 
+
+    }
+
+
+
+    .nav-links {
+
+      list-style: none;
+
+      display: flex;
+
+      gap: 30px;
+
+    }
+
+
+
+    .nav-links a {
+
+      text-decoration: none;
+
+      color: #a0a0b0;
+
+      font-weight: 500;
+
+      transition: color 0.3s;
+
+    }
+
+
+
+    .nav-links a:hover {
+
+      color: #00f0ff;
+
+    }
+
+
+
+    .login-btn {
+
+      background: transparent;
+
+      border: 1px solid #00f0ff;
+
+      color: #00f0ff;
+
+      padding: 8px 24px;
+
+      border-radius: 20px;
+
+      cursor: pointer;
+
+      transition: all 0.3s;
+
+    }
+
+
+
+    .login-btn:hover {
+
+      background: #00f0ff;
+
+      color: #000;
+
+    }
+
+
+
+    .action-bar {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      padding: 20px 40px;
+
+      z-index: 20;
+
+    }
+
+
+
+    .search-container {
+
+      display: flex;
+
+      align-items: center;
+
+      background: rgba(26, 27, 38, 0.6); 
+
+      border: 1px solid #2a2b36;
+
+      border-radius: 25px;
+
+      padding: 8px 15px;
+
+      width: 300px;
+
+    }
+
+
+
+    .search-input {
+
+      background: transparent;
+
+      border: none;
+
+      color: white;
+
+      outline: none;
+
+      margin-left: 10px;
+
+      width: 100%;
+
+    }
+
+
+
+    .icon-group {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 15px;
+
+      position: absolute;
+
+      right: 40px;
+
+      top: 100px;
+
+      z-index: 30; 
+
+    }
+
+
+
+    .icon-circle {
+
+      width: 40px;
+
+      height: 40px;
+
+      background: rgba(26, 27, 38, 0.6);
+
+      border: 1px solid #2a2b36;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      cursor: pointer;
+
+      transition: border-color 0.3s;
+
+    }
+
+
+
+    .icon-circle:hover {
+
+      border-color: #00f0ff;
+
+    }
+
+
+
+    .gallery-container {
+
+      flex: 1;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      perspective: 1200px;
+
+    }
+
+
+
+    .carousel {
+
+      position: relative;
+
+      width: 100%;
+
+      max-width: 1000px;
+
+      height: 450px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+
+
+    .card {
+
+      position: absolute;
+
+      width: 220px;
+
+      height: 330px;
+
+      background: #1a1b26;
+
+      border-radius: 12px;
+
+      border: 1px solid #2a2b36;
+
+      cursor: pointer;
+
+      display: flex;
+
+      flex-direction: column;
+
+      overflow: hidden;
+
+      user-select: none;
+
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, border-color 0.6s ease;
+
+    }
+
+
+
+    .card-poster {
+
+      width: 100%;
+
+      height: 280px;
+
+      object-fit: cover; 
+
+      display: block;
+
+      background: #2a2b36;
+
+    }
+
+
+
+    .card-label {
+
+      height: 50px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 0 15px;
+
+      text-align: center;
+
+      background: #151620;
+
+      border-top: 1px solid #2a2b36;
+
+      font-weight: bold;
+
+      font-size: 0.85rem;
+
+      color: #ffffff;
+
+      white-space: nowrap;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+
+    }
+
+
+
+    .card.is-center {
+
+      box-shadow: 0 15px 40px rgba(0, 240, 255, 0.25);
+
+      border-color: #00f0ff;
+
+    }
+
+
+
+    .card.is-center .card-label {
+
+      color: #00f0ff;
+
+    }
+
+
+
+    /* POPUP MODAL STYLES */
+
+    .modal-overlay {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.8);
+
+      backdrop-filter: blur(8px);
+
+      z-index: 1000;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      transition: opacity 0.4s ease;
+
+    }
+
+
+
+    .modal-overlay.active {
+
+      opacity: 1;
+
+      pointer-events: auto;
+
+    }
+
+
+
+    .modal-box {
+
+      background: rgba(21, 22, 32, 0.85);
+
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+      border-radius: 20px;
+
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+
+      width: 90%;
+
+      max-width: 800px;
+
+      display: flex;
+
+      overflow: hidden;
+
+      position: relative;
+
+      transform: translateY(30px) scale(0.95);
+
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+    }
+
+
+
+    .modal-overlay.active .modal-box {
+
+      transform: translateY(0) scale(1);
+
+    }
+
+
+
+    .modal-image-container {
+
+      width: 45%;
+
+      background: #000;
+
+    }
+
+
+
+    .modal-image-container img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+
+
+    .modal-content {
+
+      width: 55%;
+
+      padding: 40px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+    }
+
+
+
+    .modal-title {
+
+      font-size: 3rem; /* Made the title a bit bigger since there's more space now! */
+
+      color: #00f0ff;
+
+      margin-bottom: 30px;
+
+      font-weight: 700;
+
+      line-height: 1.1;
+
+    }
+
+
+
+    .close-btn {
+
+      position: absolute;
+
+      top: 15px;
+
+      right: 20px;
+
+      background: transparent;
+
+      border: none;
+
+      color: #ffffff;
+
+      font-size: 1.8rem;
+
+      cursor: pointer;
+
+      transition: color 0.3s;
+
+    }
+
+
+
+    .close-btn:hover {
+
+      color: #00f0ff;
+
+    }
+
+    
+
+    .watch-btn {
+
+      background: #00f0ff;
+
+      color: #000;
+
+      border: none;
+
+      padding: 15px 40px; /* Made the button slightly chunkier to look good alone */
+
+      font-size: 1.2rem;
+
+      font-weight: bold;
+
+      border-radius: 30px;
+
+      cursor: pointer;
+
+      align-self: flex-start;
+
+      transition: all 0.3s;
+
+    }
+
+    
+
+    .watch-btn:hover {
+
+      background: #ffffff;
+
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <header>
+
+    <nav class="top-nav">
+
+      <ul class="nav-links">
+
+        <li><a href="#">Profile</a></li>
+
+        <li><a href="#">Movie</a></li>
+
+        <li><a href="#">Author</a></li>
+
+        <li><a href="#">Episodes / Series</a></li>
+
+      </ul>
+
+      <button class="login-btn">Login</button>
+
+    </nav>
+
+  </header>
+
+
+
+  <section class="action-bar">
+
+    <div class="search-container">
+
+      <span class="search-icon">🔍</span>
+
+      <input type="text" id="search-input" class="search-input" placeholder="Search movies...">
+
+    </div>
+
+    
+
+    <div class="icon-group">
+
+      <div class="icon-circle">👤</div>
+
+      <div class="icon-circle">🛡️</div>
+
+      <div class="icon-circle">🤍</div>
+
+    </div>
+
+  </section>
+
+
+
+  <main class="gallery-container">
+
+    <div class="carousel" id="carousel">
+
+      
+
+      <div class="card" onclick="selectCard(0)">
+
+        <img src="movie1.jpg" class="card-poster" alt="Mary and the Witch's Flower">
+
+        <div class="card-label">Mary and the Witch's Flower</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(1)">
+
+        <img src="movie2.jpg" class="card-poster" alt="Princess Mononoke">
+
+        <div class="card-label">Princess Mononoke</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(2)">
+
+        <img src="movie3.jpg" class="card-poster" alt="Howl's Moving Castle">
+
+        <div class="card-label">Howl's Moving Castle</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(3)">
+
+        <img src="movie4.jpg" class="card-poster" alt="Ponyo">
+
+        <div class="card-label">Ponyo</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(4)">
+
+        <img src="movie5.jpg" class="card-poster" alt="That Time I Got Reincarnated as a Slime">
+
+        <div class="card-label">That Time I Got Reincarnated as a Slime</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(5)">
+
+        <img src="movie6.jpg" class="card-poster" alt="My Neighbor Totoro">
+
+        <div class="card-label">My Neighbor Totoro</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(6)">
+
+        <img src="movie7.jpg" class="card-poster" alt="Violet Evergarden">
+
+        <div class="card-label">Violet Evergarden</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(7)">
+
+        <img src="movie8.jpg" class="card-poster" alt="Your Name">
+
+        <div class="card-label">Your Name</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(8)">
+
+        <img src="movie9.jpg" class="card-poster" alt="Colorful Stage">
+
+        <div class="card-label">Colorful Stage</div>
+
+      </div>
+
+      
+
+      <div class="card" onclick="selectCard(9)">
+
+        <img src="movie10.jpg" class="card-poster" alt="Kiki's Delivery Service">
+
+        <div class="card-label">Kiki's Delivery Service</div>
+
+      </div>
+
+
+
+    </div>
+
+  </main>
+
+
+
+  <div class="modal-overlay" id="modal-overlay">
+
+    <div class="modal-box">
+
+      <button class="close-btn" onclick="closeModal()">×</button>
+
+      <div class="modal-image-container">
+
+        <img id="modal-poster" src="" alt="Movie Poster">
+
+      </div>
+
+      <div class="modal-content">
+
+        <h2 class="modal-title" id="modal-title">Title</h2>
+
+        <button class="watch-btn" id="watch-btn">Watch Details</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    const cards = document.querySelectorAll('.card');
+
+    let currentIndex = 4; // Start with Slime
+
+
+
+    // Modal elements
+
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    const modalPoster = document.getElementById('modal-poster');
+
+    const modalTitle = document.getElementById('modal-title');
+
+
+
+    function updateCarousel() {
+
+      const totalCards = cards.length;
+
+      const half = Math.floor(totalCards / 2);
+
+
+
+      cards.forEach((card, index) => {
+
+        let offset = index - currentIndex;
+
+        
+
+        if (offset > half) {
+
+          offset -= totalCards;
+
+        } else if (offset < -half) {
+
+          offset += totalCards;
+
+        }
+
+
+
+        const absOffset = Math.abs(offset);
+
+        let translateX = 0;
+
+        let scale = 1;
+
+        let opacity = 1;
+
+        let zIndex = 100 - absOffset;
+
+
+
+        if (offset === 0) {
+
+          scale = 1.35;
+
+          translateX = 0;
+
+          opacity = 1;
+
+          card.classList.add('is-center');
+
+          
+
+          const posterImg = card.querySelector('.card-poster');
+
+          const imageSrc = posterImg.getAttribute('src');
+
+          document.body.style.backgroundImage = `url('${imageSrc}')`;
+
+          
+
+        } else {
+
+          card.classList.remove('is-center');
+
+          scale = 0.85 - (absOffset * 0.1);
+
+          translateX = (offset * 140) + (Math.sign(offset) * 100);
+
+          opacity = 1 - (absOffset * 0.3); 
+
+        }
+
+
+
+        if (opacity <= 0) {
+
+          opacity = 0;
+
+          card.style.transition = 'none';
+
+        } else {
+
+          card.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, border-color 0.6s ease';
+
+        }
+
+
+
+        card.style.transform = `translateX(${translateX}px) scale(${scale})`;
+
+        card.style.zIndex = zIndex;
+
+        card.style.opacity = opacity;
+
+        card.style.pointerEvents = opacity <= 0 ? 'none' : 'auto';
+
+      });
+
+    }
+
+
+
+    function selectCard(index) {
+
+      if (index === currentIndex) {
+
+        openModal(cards[index]);
+
+        return; 
+
+      }
+
+      currentIndex = index;
+
+      updateCarousel();
+
+    }
+
+
+
+    function openModal(card) {
+
+      const posterImg = card.querySelector('.card-poster');
+
+      modalPoster.src = posterImg.src;
+
+      modalTitle.innerText = posterImg.alt;
+
+      // Removed the summary data-fetching logic here
+
+      modalOverlay.classList.add('active');
+
+    }
+
+
+
+    function closeModal() {
+
+      modalOverlay.classList.remove('active');
+
+    }
+
+
+
+    modalOverlay.addEventListener('click', function(event) {
+
+      if (event.target === modalOverlay) {
+
+        closeModal();
+
+      }
+
+    });
+
+
+
+    // --- NEW: LIVE SEARCH LOGIC ---
+
+    const searchInput = document.getElementById('search-input');
+
+    
+
+    searchInput.addEventListener('input', function(event) {
+
+      const searchTerm = event.target.value.toLowerCase().trim();
+
+      
+
+      // If the search bar is empty, don't do anything
+
+      if (!searchTerm) return; 
+
+
+
+      // Loop through all cards to see if the title matches what you typed
+
+      for (let i = 0; i < cards.length; i++) {
+
+        const title = cards[i].querySelector('.card-poster').alt.toLowerCase();
+
+        
+
+        if (title.includes(searchTerm)) {
+
+          // If a match is found, spin the carousel to that movie and stop searching
+
+          currentIndex = i;
+
+          updateCarousel();
+
+          break; 
+
+        }
+
+      }
+
+    });
+
+
+
+    // --- REDIRECT LOGIC ---
+
+    const watchBtn = document.getElementById('watch-btn');
+
+    watchBtn.addEventListener('click', function() {
+
+      const currentMovieTitle = document.getElementById('modal-title').innerText;
+
+      window.location.href = `watch.html?movie=${encodeURIComponent(currentMovieTitle)}`;
+
+    });
+
+
+
+    // Initialize the layout
+
+    updateCarousel();
+
+  </script>
+
+</body>
+
+</html>
