@@ -87,6 +87,28 @@ body {
     border-radius: 4px; /* Optional, softens the logo edges */
 }
 
+.profile {
+    display: flex;
+    gap: 50px;
+    padding: 60px;
+    align-items: flex-start;
+}
+
+.profile img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-info h2 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
