@@ -121,16 +121,32 @@ body {
     border-radius: 30px;
     text-decoration: none;
 }
+
+/* TRAILER SECTION */
+.trailer {
+    padding: 40px 60px;
+}
+
+.trailer h2 {
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.trailer video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.3);
+}
 </style>
 
 </head>
-
 <body>
 
 <header>
   <nav class="top-nav">
     <div class="my-logo">
-      <img src="../images/logo.jpg" class="logo-img">
+      <img src="../images/logo.jpg" class="logo-img" alt="Movie Hub Logo">
       <span class="logo-sub">MOVIE HUB</span>
     </div>
 
@@ -167,6 +183,17 @@ body {
 
     <a href="index.html" class="watch-btn">← Back to Hub</a>
   </div>
+</section>
+
+<!-- TRAILER SECTION -->
+<section class="trailer">
+  <h2>🎬 Trailer</h2>
+
+  <video controls>
+    <source src="trailer3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
 </section>
 
 </body>
