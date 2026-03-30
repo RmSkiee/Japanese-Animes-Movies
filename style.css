@@ -15,6 +15,11 @@ body {
     overflow-x: hidden;
 }
 
+.links-box a:hover {
+    background-color: rgba(255,140,0,0.15);
+    color: #ffb347;
+}
+
 .my-main-bg {
     min-height: 100vh;
     background: linear-gradient(145deg, #0c0c0c 25%, #2b051a 65%, #1a0a05 90%);

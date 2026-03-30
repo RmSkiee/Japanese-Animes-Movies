@@ -7,12 +7,28 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:authors\\authors.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about\\about.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\author1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:authors\\author1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:authors\\authors.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:authors\\authors.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +38,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "about.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.css",
+              "RelativeDocumentMoniker": "about\\about.css",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.css",
+              "RelativeToolTip": "about\\about.css",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-23T14:18:34.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "author1.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\author1.html",
+              "RelativeDocumentMoniker": "authors\\author1.html",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\author1.html",
+              "RelativeToolTip": "authors\\author1.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-23T13:19:56.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "authors.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.html",
+              "RelativeDocumentMoniker": "authors\\authors.html",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.html",
+              "RelativeToolTip": "authors\\authors.html",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAqwFoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-23T13:19:22.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "about.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.html",
+              "RelativeDocumentMoniker": "about\\about.html",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\about\\about.html",
+              "RelativeToolTip": "about\\about.html",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-23T13:05:24.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "authors.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\authors\\authors.css",
               "RelativeDocumentMoniker": "authors\\authors.css",
@@ -38,13 +102,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\style.css",
               "RelativeDocumentMoniker": "style.css",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\style.css",
               "RelativeToolTip": "style.css",
-              "ViewState": "AgIAADIBAAAAAAAAAAAqwEgBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-03-23T04:39:41.903Z"
             },
@@ -56,7 +120,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\Japanese-Animes-Movies\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-22T16:30:10.347Z",
               "EditorCaption": ""
