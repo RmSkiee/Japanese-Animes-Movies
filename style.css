@@ -37,6 +37,34 @@ body {
     border-bottom: 2px solid #ff6500;
 }
 
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover{
+    background-color: rgba(255,140,0,0.15);
+    color: #ffb347;
+}
+
+.nav-links a[href="index.html"]{
+    color: #ffb347;
+    position: relative;
+}
+
+.nav-links a[href="index.html"]::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background:#ff8c00;
+}
+
 .my-logo {
     display: flex;
     align-items: center;
@@ -57,18 +85,6 @@ body {
     text-shadow: 0 0 8px #ff6500;
     text-transform: uppercase;
 }
-
-.links-box {
-    display: flex;
-    gap: 20px;
-}
-
-    .links-box a {
-        color: #ff4500;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: bold;
-    }
 
 
 
